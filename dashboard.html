@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./STYLES/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Dashboard - CRUDTASK</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-title"><i class="fa-brands fa-black-tie"></i>CRUDZASO</h1>
+            <div class="navbar-user">
+                <span id="userName">User</span>
+                <a href="./profile.html" class="btn-profile">My Profile</a>
+                <button id="logoutBtn" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="app-wrap">
+        <aside class="app-sidebar">
+            <div class="brand">
+                <div class="logo">CRUDZASO</div>
+            </div>
+            <nav class="side-nav">
+                <button class="side-link active">Dashboard</button>
+                <a class="side-link mytasksBtn" href="">My Tasks</a>
+                <a class="side-link profileBtn" href="./profile.html">Profile</a>
+            </nav>
+        </aside>
+
+        <section class="app-main">
+            <header class="main-header">
+                <div>
+                    <h1>Task Manager</h1>
+                    <p class="subtitle">Overview of your current academic performance tasks.</p>
+                </div>
+                <div class="header-actions">
+                    <button id="newTaskBtn" class="btn-primary">+ New Task</button>
+                </div>
+            </header>
+
+            <section class="stats-cards">
+                <div class="stat-card ">
+                    <div class="stat-label">Total Tasks <i class="bi bi-stack"></i></div>
+                    <div class="stat-value" id="totalTasks">0</div>
+                    <div class="stat-note" id="totalDelta"></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Completed <i class="fa-regular fa-circle-check"></i></div>
+                    <div class="stat-value" id="completedTasks">0</div>
+                    <div class="stat-note">On track</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Pending <i class="fa-regular fa-clock"></i></div>
+                    <div class="stat-value" id="pendingTasks">0</div>
+                    <div class="stat-note">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Overall Progress <i class="bi bi-exclamation-circle"></i></div>
+                    <div class="stat-value" id="progressPercent">0%</div>
+                    <div class="stat-note">Keep it up</div>
+                </div>
+            </section>
+
+            <section class="table-actions">
+                <div class="search-wrap">
+                    <input id="searchInput" type="search" placeholder="Search tasks...">
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn active" data-filter="todas">All Tasks</button>
+                    <button class="tab-btn" data-filter="pendiente">Pending</button>
+                    <button class="tab-btn" data-filter="completada">Completed</button>
+                </div>
+            </section>
+
+            <section class="tasks-table-wrap">
+                <table class="tasks-table taskTable">
+                    <thead>
+                        <tr>
+                            <th>TASK NAME</th>
+                            <th>ASSIGNEE</th>
+                            <th>STATUS</th>
+                            <th>PRIORITY</th>
+                            <th>DUE DATE</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tasksTableBody">
+                        <tr>
+                            <td colspan="6">Cargando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Modal para crear/editar tarea -->
+            <div id="taskModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 id="modalTitle">Nueva Tarea</h3>
+                    <form id="taskForm">
+                        <div class="form-group">
+                            <label for="taskTitle">Título</label>
+                            <input type="text" id="taskTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDescription">Descripción</label>
+                            <textarea id="taskDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taskDate">Fecha de Entrega</label>
+                                <input type="date" id="taskDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskPriority">Prioridad</label>
+                                <select id="taskPriority">
+                                    <option value="baja">Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Guardar Tarea</button>
+                            <button type="button" class="btn-secondary" id="cancelBtn">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="./JS/dashboard.js"></script>
+</body>
+
+</html>

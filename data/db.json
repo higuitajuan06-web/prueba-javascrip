@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "id": "admin001",
+      "nombre": "Administrador CRUDTASK",
+      "email": "admin@crudtask.com",
+      "password": "admin123",
+      "rol": "admin",
+      "fechaRegistro": "2026-02-02T00:00:00.000Z"
+    }
+  ],
+  "tareas": [
+  ]
+}

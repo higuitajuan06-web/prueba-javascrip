@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./STYLES/admin-dashboard.css">
+    <title>Panel de Administrador - CRUDTASK</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-admin">
+        <div class="navbar-container">
+            <h1 class="navbar-title"> CRUDTASK - Panel Admin</h1>
+            <div class="navbar-user">
+                <span class="adminName" id="adminName">Admin</span>
+                <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Sidebar of navigation -->
+        <aside class="admin-sidebar">
+            <ul class="sidebar-menu">
+                <li><button class="menu-btn active" data-section="dashboard"> Dashboard</button></li>
+                <li><button class="menu-btn" data-section="usuarios">Usuarios</button></li>
+                <li><button class="menu-btn" data-section="tareas"> Todas las Tareas</button></li>
+                <li><button class="menu-btn" data-section="actividad"> Actividad</button></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <!-- section Dashboard -->
+            <section id="dashboard" class="admin-section active">
+                <h2 class="title-dashboard">Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Usuarios Totales</h3>
+                        <p class="stat-value" id="totalUsuarios">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tareas Creadas</h3>
+                        <p class="stat-value" id="totalTareas">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tareas Completadas</h3>
+                        <p class="stat-value" id="tareasCompletadas">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tasa de Completitud</h3>
+                        <p class="stat-value" id="tasaCompletitud">0%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section dashboard -->
+            <section id="usuarios" class="admin-section">
+                <h2>Gestión de Usuarios</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchUsuarios" placeholder="Buscar usuario...">
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Fecha Registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuariosTableBody">
+                        <tr>
+                            <td colspan="6">Cargando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- section taks-->
+            <section id="tareas" class="admin-section">
+                <h2>Todas las Tareas</h2>
+                <div class="filters-bar">
+                    <button class="filter-btn active" data-filter="todas">Todas</button>
+                    <button class="filter-btn" data-filter="pendiente">Pendientes</button>
+                    <button class="filter-btn" data-filter="completada">Completadas</button>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Usuario</th>
+                            <th>Estado</th>
+                            <th>Prioridad</th>
+                            <th>Fecha Entrega</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tareasTableBody">
+                        <tr>
+                            <td colspan="6">Cargando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- section activities -->
+            <section id="actividad" class="admin-section">
+                <h2>Actividad del Sistema</h2>
+                <div id="actividadList" class="activity-list">
+                    <p>Cargando actividad...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./JS/admin-dashboard.js"></script>
+</body>
+
+</html>
