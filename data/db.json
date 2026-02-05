@@ -7,8 +7,60 @@
       "password": "admin123",
       "rol": "admin",
       "fechaRegistro": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "nombre": "Tommy",
+      "email": "higuitajuan06@gmail.com",
+      "password": "1033183152",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-03T05:53:56.799Z",
+      "id": "0ue7io9yd"
+    },
+    {
+      "id": "admin001",
+      "nombre": "Administrador CRUDTASK",
+      "email": "admin@gmail.com",
+      "password": "admin12345",
+      "rol": "admin",
+      "fechaRegistro": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "id": "ceuhfe7no",
+      "nombre": "julian",
+      "email": "julianhiguita2007@gmail.com",
+      "password": "Jul2007.m",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-03T07:04:47.843Z"
+    },
+    {
+      "id": "t0dd3yea6",
+      "nombre": "pepito",
+      "email": "ksnksndwsj@gmail.com",
+      "password": "1234567890",
+      "rol": "usuario",
+      "fechaRegistro": "2026-02-04T18:23:35.588Z"
     }
   ],
   "tareas": [
+    {
+      "id": "sucy2vjks",
+      "titulo": "javascrip-crud with json-server",
+      "descripcion": "ESTA TAREA ES PARA APRENDER UN POCO MAS SOBRE EL CRUD Y JSON-SERVER Y TAMBIEN MAS SOBRE LOS MICROS.",
+      "fechaEntrega": "2026-10-22",
+      "prioridad": "alta",
+      "estado": "completada",
+      "usuarioId": "0ue7io9yd",
+      "fechaCreacion": "2026-02-03T05:57:16.459Z"
+    },
+    {
+      "id": "foo7bwpfv",
+      "titulo": "sociales",
+      "descripcion": "tarear de sociales latinamerica.",
+      "fechaEntrega": "2026-02-10",
+      "prioridad": "media",
+      "estado": "pendiente",
+      "usuarioId": "ceuhfe7no",
+      "fechaCreacion": "2026-02-03T07:22:18.466Z"
+    }
   ]
 }

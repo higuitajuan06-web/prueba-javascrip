@@ -67,7 +67,7 @@ loginForm.addEventListener('submit', async (e) => {
         };
 
         localStorage.setItem('usuarioAutenticado', JSON.stringify(usuarioSesion));
-
+        
         alert('¡Bienvenido ' + usuario.nombre + '!');
 
         // Limpiar formulario

@@ -70,7 +70,7 @@ registerForm.addEventListener('submit', async (e) => {
             registerForm.reset();
             // Redirigir al login después de 1.5 segundos
             setTimeout(() => {
-                window.location.href = '../index.html';
+                window.location.href = './index.html';
             }, 1500);
         } else {
             alert('Error al registrar. Intenta de nuevo.');
